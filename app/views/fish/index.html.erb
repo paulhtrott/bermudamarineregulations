@@ -1,20 +1,14 @@
-<h1><%= pluralize @fishes.size, "Fish" %></h1>
 <h1><%= pluralize @fish_with_regulations.size, "Fish" %> with regulations</h1>
 <section>
-<% @fishes.each do |fish| %>
-  <article>
-    <ul style="list-style-type: none;">
-      <li><h3><%= fish.name %></h3></li>
-      <% unless fish.name == fish.alt_name %>
-        <li>Alternate Name: <%= fish.alt_name %></li>
-      <% end %>
-      <li>Order: <%= fish.order %></li>
-      <li>Family: <%= fish.family %></li>
-      <li>Species: <%= fish.species %></li>
-      <li>Occurrence: <%= fish.occurrence %></li>
-      <li>Minimum Size: <%= fish.minimum_size %></li>
-      <li>Bag Limit: <%= fish.bag_limit %></li>
-    </ul>
-  </article>
-<% end %>
+  <% @fish_with_regulations.each do |fish| %>
+    <article>
+      <%= link_to title(fish), fish_path(fish) %>
+      <h5>Regulations</h5>
+      <ul style="list-style-type: none;">
+        <li>Minimum Size: <%= fish.minimum_size %></li>
+        <li>Bag Limit: <%= fish.bag_limit %></li>
+      </ul>
+    </article>
+    <hr>
+  <% end %>
 </section>

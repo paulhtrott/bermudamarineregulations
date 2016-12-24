@@ -1,0 +1,15 @@
+<%= link_to "Fish", fish_index_path %>&nbsp;&nbsp;/&nbsp;&nbsp;<%= "id# #{@fish.id}" %>
+<section>
+  <article>
+    <%= title @fish %>
+    <ul>
+      <li>Order: <%= @fish.order %></li>
+      <li>Family: <%= @fish.family %></li>
+      <li>Species: <%= @fish.species %></li>
+      <li>Occurence: <%= @fish.occurrence %></li>
+      <li>Minimum Size: <%= @fish.minimum_size %></li>
+      <li>Bag Limit: <%= @fish.bag_limit %></li>
+      <li><%= link_to "Google Images", google_image_search_path(@fish), target: :_blank %></li>
+    </ul>
+  </article>
+</section>
