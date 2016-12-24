@@ -19,6 +19,7 @@
 
 *.DS_Store
 fishdatabase.csv
+/config/database.yml
 
 # Ignore Byebug command history file.
 .byebug_history
