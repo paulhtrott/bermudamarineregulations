@@ -6,7 +6,7 @@ module FishHelper
   end
 
   def title(fish)
-    if fish.name.downcase == fish.alt_name.downcase
+    if fish.name.downcase.eql? fish.alt_name.downcase
       content_tag :h1, fish.name.capitalize
     else
       content_tag :h1, "#{fish.name.capitalize} (#{fish.alt_name.downcase})"
