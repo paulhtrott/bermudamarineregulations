@@ -5,17 +5,24 @@
         <li><%= link_to "Regulated Fish", fish_index_path %></li>
         <li><%= @fish.name %></li>
       </ol>
-      <section>
-        <article>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <%= image_tag "marine/fish/#{@fish.name.downcase.gsub(/\s+/, '')}", class: "img-responsive img-thumbnail", alt: @fish.name %>
+    </div>
+    <div class="col-md-8">
+      <section class="fish-details">
+        <article class="fish">
           <%= title @fish %>
           <ul class="list-unstyled">
-            <li>Order: <%= @fish.order %></li>
-            <li>Family: <%= @fish.family %></li>
-            <li>Species: <%= @fish.species %></li>
-            <li>Occurence: <%= @fish.occurrence %></li>
-            <li>Minimum Size: <%= @fish.minimum_size %></li>
-            <li>Bag Limit: <%= @fish.bag_limit %></li>
-            <li><%= link_to "Google Images", google_image_search_path(@fish) %></li>
+            <li><span class="sub-title">Order</span><%= @fish.order %></li>
+            <li><span class="sub-title">Family</span><%= @fish.family %></li>
+            <li><span class="sub-title">Species</span><%= @fish.species %></li>
+            <li><span class="sub-title">Occurence</span><%= @fish.occurrence %></li>
+            <li><span class="sub-title">Minimum Size</span><%= @fish.minimum_size %></li>
+            <li><span class="sub-title">Bag Limit</span><%= @fish.bag_limit %></li>
+            <li class="google-search"><%= link_to "View More Images", google_image_search_path(@fish), class: "btn btn-default" %></li>
           </ul>
         </article>
       </section>
