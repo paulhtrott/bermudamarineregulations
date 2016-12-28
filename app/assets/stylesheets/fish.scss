@@ -6,7 +6,7 @@ section.fishes {
     margin-bottom: 4em;
     height: 530px;
 
-    @media (max-width: 729px) {
+    @media (max-width: $screen-md-min) {
       text-align: center;
     }
   }
