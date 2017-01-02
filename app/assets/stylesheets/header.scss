@@ -1,0 +1,20 @@
+@import "custom";
+
+.navbar-default {
+  background-color: $company-dark-blue;
+
+  .navbar-header {
+    text-align: center;
+    float: none;
+    margin-top: 1em;
+  }
+
+  a.navbar-brand {
+    cursor: pointer;
+    color: white;
+    float: none;
+    &:hover {
+      color: $company-light-blue;
+    }
+  }
+}

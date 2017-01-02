@@ -1,37 +1,41 @@
 @import "custom";
 
-section.fishes {
-  article.fish {
-    margin-top: 4em;
-    margin-bottom: 4em;
-    height: 530px;
+section  {
+  &.fishes, &.fish-details {
+    span.sub-title {
+      display: block;
+      font-weight: bold;
+    }
 
-    @media (max-width: $screen-md-min) {
-      text-align: center;
+    li {
+      margin-bottom: .6em;
+      font-size: 1.5em;
+
+      &.google-search {
+        margin-top: 1em;
+      }
+
+      span {
+        font-size: .7em;
+      }
+    }
+  }
+
+  &.fishes {
+    article.fish {
+      margin-bottom: 4em;
+      height: 530px;
+
+      @media (max-width: $screen-md-min) {
+        text-align: center;
+      }
     }
   }
 }
 
-span.sub-title {
-  display: block;
-  font-weight: bold;
-}
-
-li {
-  margin-bottom: .6em;
-  font-size: 1.5em;
-
-  &.google-search {
-    margin-top: 1em;
-  }
-
-  span {
-    font-size: .7em;
-  }
-}
 
 @media (min-width: $screen-md-min) {
-  .fish-details {
+  section.fish-details {
     h3 {
       margin-top: 0;
     }
