@@ -15,15 +15,15 @@
       <section class="fish-details">
         <article class="fish">
           <%= title @fish %>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled list-inline">
             <li><span class="sub-title">Order</span><%= @fish.order %></li>
             <li><span class="sub-title">Family</span><%= @fish.family %></li>
             <li><span class="sub-title">Species</span><%= @fish.species %></li>
             <li><span class="sub-title">Occurence</span><%= @fish.occurrence %></li>
             <li><span class="sub-title">Minimum Size</span><%= @fish.minimum_size %></li>
             <li><span class="sub-title">Bag Limit</span><%= @fish.bag_limit %></li>
-            <li class="google-search"><%= link_to "View More Images", google_image_search_path(@fish), class: "btn btn-default" %></li>
           </ul>
+          <%= link_to "View More Images", google_image_search_path(@fish), class: "btn btn-default" %>
         </article>
       </section>
     </div>
