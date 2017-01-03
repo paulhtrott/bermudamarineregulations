@@ -8,13 +8,13 @@
   </div>
   <div class="row">
       <section class="fishes">
-        <% @fish_with_regulations.each do |fish| %>
+        <% @fishes.each do |fish| %>
           <div class="col-md-4">
             <article class="fish">
-              <%= link_to fish_path(fish) do %>
+              <%= link_to regulated_fish_path(fish) do %>
                 <%= image_tag fish.img_path, class: "img-responsive img-thumbnail", alt: fish.name %>
               <% end %>
-              <%= link_to title(fish), fish_path(fish) %>
+              <%= link_to title(fish), regulated_fish_path(fish) %>
               <h4>Regulations</h4>
               <ul class="list-unstyled">
                 <li><span class="sub-title">Minimum Size</span> <%= fish.minimum_size %></li>

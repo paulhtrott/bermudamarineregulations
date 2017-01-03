@@ -1,6 +1,7 @@
 class Fish < ApplicationRecord
 
-  scope :fish_with_regulations, -> { where("minimum_size != ? OR bag_limit != ?", "no minimum", "no limit") }
+  scope :regulated, -> { where("minimum_size != ? OR bag_limit != ?", "no minimum", "no limit") }
+  scope :unregulated, -> { where("minimum_size = ? AND bag_limit = ?", "no minimum", "no limit") }
   scope :order_by_name, -> { order(:name) }
 
   def img_path

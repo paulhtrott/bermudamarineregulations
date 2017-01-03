@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <ol class="breadcrumb">
-        <li><%= link_to "Regulated Fish", fish_index_path %></li>
+        <li><%= link_to "Unregulated Fish", unregulated_fish_index_path %></li>
         <li><%= @fish.name %></li>
       </ol>
     </div>
@@ -20,8 +20,6 @@
             <li><span class="sub-title">Family</span><%= @fish.family %></li>
             <li><span class="sub-title">Species</span><%= @fish.species %></li>
             <li><span class="sub-title">Occurence</span><%= @fish.occurrence %></li>
-            <li><span class="sub-title">Minimum Size</span><%= @fish.minimum_size %></li>
-            <li><span class="sub-title">Bag Limit</span><%= @fish.bag_limit %></li>
           </ul>
           <%= link_to "View More Images", google_image_search_path(@fish), class: "btn btn-default" %>
         </article>
