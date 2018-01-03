@@ -19,6 +19,7 @@
 
 *.DS_Store
 /config/database.yml
+*.swp
 
 # Ignore Byebug command history file.
 .byebug_history
