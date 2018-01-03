@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'coffee-rails', '~> 4.2'
+gem 'httparty'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'pg'
