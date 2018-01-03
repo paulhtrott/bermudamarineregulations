@@ -5,6 +5,6 @@ class Fish < ApplicationRecord
   scope :order_by_name, -> { order(:name) }
 
   def img_path
-    "marine/fish/#{name.downcase.gsub(/\s+/, '')}.jpg"
+    image_path
   end
 end
