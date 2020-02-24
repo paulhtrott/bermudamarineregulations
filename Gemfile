@@ -7,7 +7,7 @@ gem 'httparty'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'pg'
-gem 'puma', '~> 3.0'
+gem 'puma'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
@@ -25,4 +25,4 @@ group :development do
   gem 'web-console'
 end
 
-ruby "2.3.1"
+ruby "2.5.7"
